@@ -1,11 +1,11 @@
-*{
-  margin:0;
-  padding:0;
-  font-family: 'Poppins', 'sans-serif';
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "sans-serif";
   box-sizing: border-box;
 }
 
-.hero{
+.hero {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(45deg, #010758, #490d61);
@@ -14,46 +14,50 @@
   justify-content: center;
   flex-direction: column;
   color: #fff;
+  text-align: center; /* Center text for better mobile readability */
 }
 
-.hero h1{
+.hero h1 {
   font-size: 45px;
-  font-weight: 500px;
+  font-weight: 500;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.hero h1 span{
-  color:#ff2963;
+.hero h1 span {
+  color: #ff2963;
 }
 
-textarea{
-  width: 600px;
+textarea {
+  width: 100%; /* Full width for better adaptability */
+  max-width: 600px; /* Max width to maintain structure on larger screens */
   height: 250px;
-  background:#403d84;
-  color:#fff;
+  background: #403d84;
+  color: #fff;
   font-size: 15px;
   border: 0;
-  outline:0;
+  outline: 0;
   padding: 20px;
   border-radius: 10px;
   resize: none;
   margin-bottom: 30px;
 }
 
-textarea::placeholder{
+textarea::placeholder {
   font-size: 16px;
   color: #ddd;
 }
 
-.row{
-  width: 600px;
+.row {
+  width: 100%; /* Full width for better adaptability */
+  max-width: 600px; /* Max width to maintain structure on larger screens */
   display: flex;
+  flex-direction: column; /* Stack elements vertically on mobile */
   align-items: center;
   gap: 20px;
 }
 
-button{
+button {
   background: #ff2963;
   color: #fff;
   font-size: 16px;
@@ -62,35 +66,62 @@ button{
   border: 0;
   outline: 0;
   cursor: pointer;
-  display:flex;
+  display: flex;
   align-items: center;
 }
 
-button img{
+button img {
   width: 16px;
   margin-right: 10px;
 }
 
-button:hover{
+button:hover {
   opacity: 0.6;
 }
 
-button:active{
+button:active {
   background-color: green;
 }
 
-select{
-  flex: 1;
+select {
+  width: 100%; /* Full width for better adaptability */
+  max-width: 600px; /* Max width to maintain structure on larger screens */
   color: #fff;
   background: #403d84;
   height: 50px;
-  padding:0 20px;
+  padding: 0 20px;
   outline: 0;
   border: 0;
   border-radius: 35px;
   appearance: none;
-  background-image:url(assets/dropdown.jpg);
+  background-image: url(assets/dropdown.jpg);
   background-repeat: no-repeat;
   background-size: 15px;
   background-position-x: calc(100% - 20px);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 35px; /* Smaller font size for mobile */
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  textarea {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+
+  .row {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  button {
+    width: 100%; /* Full width button for better touch interaction */
+    justify-content: center; /* Center the content of the button */
+  }
+
+  select {
+    width: 100%; /* Full width select for better touch interaction */
+  }
 }
